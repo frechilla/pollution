@@ -111,20 +111,32 @@
                     var markerCoords = marker.getLatLng()
 
                     // Create a popup with a unique ID linked to this record
-                    var popup = $("<div></div>", {
-                        id: "popup-" + properties.COD,
-                        css: {
-                            position: "absolute",
-                            //top: e.containerPoint.y - 60 + "px",
-                            //left: e.containerPoint.x - 35 + "px",
-                            top: map.latLngToContainerPoint(markerCoords).y - 90 + "px",
-                            left: map.latLngToContainerPoint(markerCoords).x - 35 + "px"
-                       }
-                    });
+                    if (e.containerPoint.x < (map.getSize().x / 2)) {
+                        var popup = $("<div></div>", {
+                            id: "popup-" + properties.COD,
+                            css: {
+                                position: "absolute",
+                                //top: e.containerPoint.y - 60 + "px",
+                                //left: e.containerPoint.x - 35 + "px",
+                                top: map.latLngToContainerPoint(markerCoords).y - 90 + "px",
+                                left: map.latLngToContainerPoint(markerCoords).x - 35 + "px"
+                            }
+                        });
+                        var html_text = "<div class=\"triangle-isosceles\"><b>" + properties.NAME + "</b> a la";
+                    } else {
+                        var popup = $("<div></div>", {
+                            id: "popup-" + properties.COD,
+                            css: {
+                                position: "absolute",
+                                top: map.latLngToContainerPoint(markerCoords).y - 90 + "px",
+                                right: map.getSize().x - map.latLngToContainerPoint(markerCoords).x - 35 + "px"
+                            }
+                        });
+                        var html_text = "<div class=\"triangle-isosceles right\"><b>" + properties.NAME + "</b> a la";
+                    }
                     
                     var d = new Date(0); // set the date to the beginning of times
-                    d.setUTCSeconds(properties.DATE);                    
-                    html_text = "<div class=\"triangle-isosceles\"><b>" + properties.NAME + "</b> a la";
+                    d.setUTCSeconds(properties.DATE);
                     html_text += (d.getHours() != 1) ? 's ': ' ';
                     html_text += ((d.getHours() < 10) ? '0' + d.getHours(): d.getHours()) + ":" ;
                     html_text += ((d.getMinutes() < 10) ? '0' + d.getMinutes(): d.getMinutes());
@@ -172,7 +184,7 @@
                     marker.bringToFront();
                     marker.setStyle(highlightedStyle[overallStatus]);
                     marker.setRadius(highlightedStyle[overallStatus].radius); // it is not updated with setStyle
-
+                    
                     // And add the popup to the map
                     popup.appendTo("#map");                    
                 });

@@ -175,12 +175,12 @@ Dual licensed under MIT and GNU GPLv2 © Nicolas Gallagher  */
     display:block; 
     width:0;
 }
-/*.triangle-isosceles.right:after {
+.triangle-isosceles.right:after {
     position:absolute;
     right:25px;
     bottom:-10px;
     left:auto;
-}*/
+}
 
 
 /* popup styles */

@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+ <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta charset="utf-8" />
+  <title>Aire fresco</title>
+
+  <!-- All the stuff you need to install from Leaflet -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.css" />
+  <!--[if lte IE 8]>
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.ie.css" />
+  <![endif]-->  
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="http://cdn.leafletjs.com/leaflet-0.4.4/leaflet.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ </head>
+ <body>
+  <div id="wrap">
+   <div id="header"></div>
+   <div id="nav"></div>
+   <div id="sidebar">
+    <h2>Sidebar</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+    <div id="footer">
+     Aire fresco - ©2012 me!
+    </div>
+   </div>
+   <div id="main">
+    <div id="map" style="width: 100%; height: 100%"></div>
+	<script>
+		var map = L.map('map').setView([40.413496, -3.703308], 10);
+
+		L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+			maxZoom: 18,
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+		}).addTo(map);
+        
+        var normalStyle = new Array();
+        normalStyle[0] = { radius: 7, opacity: 1, fillOpacity: 1, color: "black", fillColor: "lightgrey" };  // Error-unknown
+        normalStyle[1] = { radius: 7, opacity: 1, fillOpacity: 1, color: "olive", fillColor: "green" };      // Good
+        normalStyle[2] = { radius: 7, opacity: 1, fillOpacity: 1, color: "goldenrod", fillColor: "yellow" }; // Acceptable
+        normalStyle[3] = { radius: 7, opacity: 1, fillOpacity: 1, color: "darkred", fillColor: "red" };      // Bad
+        normalStyle[4] = { radius: 7, opacity: 1, fillOpacity: 1, color: "lightgrey", fillColor: "black" };  // Very bad
+        
+        var highlightedStyle = new Array();
+        highlightedStyle[0] = { radius: 10, opacity: 1, fillOpacity: 1, color: "black", fillColor: "lightgrey" }; // Error-unknown
+        highlightedStyle[1] = { radius: 10, opacity: 1, fillOpacity: 1, color: "olive", fillColor: "green" };     // Good
+        highlightedStyle[2] = { radius: 10, opacity: 1, fillOpacity: 1, color: "goldenrod", fillColor: "yellow" };// Acceptable
+        highlightedStyle[3] = { radius: 10, opacity: 1, fillOpacity: 1, color: "darkred", fillColor: "red" };     // Bad
+        highlightedStyle[4] = { radius: 10, opacity: 1, fillOpacity: 1, color: "lightgrey", fillColor: "black" }; // Very bad
+        
+        // validates indexes before accesing style arrays
+        //
+        function validateStatus(status) {
+            return (status < -1 || status > 4) ? -1: status;
+        }
+
+        // Define what happens to each point just before it is loaded on to
+        // the map. This is Leaflet's special way of goofing around with your
+        // data, setting styles and regulating user interactions.
+        var onEachProbe = function(feature, latlng) {
+            var overallStatus = 0;
+            var statusInfo = new Array();
+            statusInfo[0] = ''; statusInfo[1] = ''; statusInfo[2] = ''; statusInfo[3] = ''; statusInfo[4] = '';
+            
+            if (validateStatus(feature.properties.STATUS.SO2) >= 0) {
+                statusInfo[validateStatus(feature.properties.STATUS.SO2)] += ', SO<sub>2</sub>';
+            }
+            overallStatus = (validateStatus(feature.properties.STATUS.SO2) > overallStatus) ? 
+                validateStatus(feature.properties.STATUS.SO2) : overallStatus;
+
+            if (validateStatus(feature.properties.STATUS.O3) >= 0) {
+                statusInfo[validateStatus(feature.properties.STATUS.O3)] += ', O<sub>3</sub>';
+            }
+            overallStatus = (validateStatus(feature.properties.STATUS.O3) > overallStatus) ?
+                validateStatus(feature.properties.STATUS.O3) : overallStatus;
+
+            if (validateStatus(feature.properties.STATUS.NO2) >= 0) {
+                statusInfo[validateStatus(feature.properties.STATUS.NO2)] += ', NO<sub>2</sub>';
+            }
+            overallStatus = (validateStatus(feature.properties.STATUS.NO2) > overallStatus) ?
+                validateStatus(feature.properties.STATUS.NO2) : overallStatus;
+            
+            if (validateStatus(feature.properties.STATUS.PM10) >= 0) {
+            statusInfo[validateStatus(feature.properties.STATUS.PM10)] += ', PM10';
+            }
+            overallStatus = (validateStatus(feature.properties.STATUS.PM10) > overallStatus) ?
+                validateStatus(feature.properties.STATUS.PM10) : overallStatus;
+
+            if (validateStatus(feature.properties.STATUS.CO) >= 0) {
+                statusInfo[validateStatus(feature.properties.STATUS.CO)] += ', CO';
+            }
+            overallStatus = (validateStatus(feature.properties.STATUS.CO) > overallStatus) ?
+                validateStatus(feature.properties.STATUS.CO) : overallStatus;
+
+            
+            var marker = new L.circleMarker(latlng, normalStyle[overallStatus]);
+            
+            if (overallStatus == 0) {
+                marker.bringToBack();
+            }
+            
+            (function(marker, statusInfo, overallStatus, properties) {
+                marker.on("click", function (e) {
+                    alert('clicked on ' + properties.COD);
+                });
+
+                // mouseover: highlight the circlemarker. Create and show a popup
+                marker.on("mouseover", function (e) {
+                    var markerCoords = marker.getLatLng()
+
+                    // Create a popup with a unique ID linked to this record
+                    var popup = $("<div></div>", {
+                        id: "popup-" + properties.COD,
+                        css: {
+                            position: "absolute",
+                            //top: e.containerPoint.y - 60 + "px",
+                            //left: e.containerPoint.x - 35 + "px",
+                            top: map.latLngToContainerPoint(markerCoords).y - 90 + "px",
+                            left: map.latLngToContainerPoint(markerCoords).x - 35 + "px"
+                       }
+                    });
+                    
+                    var d = new Date(0); // set the date to the beginning of times
+                    d.setUTCSeconds(properties.DATE);                    
+                    html_text = "<div class=\"triangle-isosceles\"><b>" + properties.NAME + "</b> a la";
+                    html_text += (d.getHours() != 1) ? 's ': ' ';
+                    html_text += ((d.getHours() < 10) ? '0' + d.getHours(): d.getHours()) + ":" ;
+                    html_text += ((d.getMinutes() < 10) ? '0' + d.getMinutes(): d.getMinutes());
+                    html_text += "<br/><table class=\"hoverpopup\"><tr>";
+                    
+                    var tableEmpty = true;
+                    if (statusInfo[1] != '') {
+                        html_text += "<td>" + "<div id=\"circle-1\" class=\"circle\"></td><td>" + statusInfo[1].substr(2) + "</td>";
+                        tableEmpty = false;
+                    }
+                    if (statusInfo[2] != '') {
+                        if (tableEmpty == false) {
+                            html_text += "<td>&nbsp;</td>"
+                        }
+                        html_text += "<td>" + "<div id=\"circle-2\" class=\"circle\"></td><td>" + statusInfo[2].substr(2) + "</td>";
+                        tableEmpty = false;
+                    }
+                    if (statusInfo[3] != '') {
+                        if (tableEmpty == false) {
+                            html_text += "<td>&nbsp;</td>"
+                        }
+                        html_text += "<td>" + "<div id=\"circle-3\" class=\"circle\"></td><td>" + statusInfo[3].substr(2) + "</td>";
+                        tableEmpty = false;
+                    }
+                    if (statusInfo[4] != '') {
+                        if (tableEmpty == false) {
+                            html_text += "<td>&nbsp;</td>"
+                        }
+                        html_text += "<td>" + "<div id=\"circle-4\" class=\"circle\"></td><td>" + statusInfo[4].substr(2) + "</td>";
+                        tableEmpty = false;
+                    }
+                    if (tableEmpty && statusInfo[0] != '') {
+                        html_text += "<td>" + "<div id=\"circle-0\" class=\"circle\"></td><td>" + statusInfo[0].substr(2) + "</td>";
+                        tableEmpty = false;
+                    }
+                    if (tableEmpty) {
+                        html_text += "<td>" + "(No hay datos disponibles)" + "</td>";
+                    }
+                    
+                    html_text += "</tr></table></div>";
+                    var hed = $(html_text, {
+                    }).appendTo(popup);
+                    
+                    // set the new style
+                    marker.bringToFront();
+                    marker.setStyle(highlightedStyle[overallStatus]);
+                    marker.setRadius(highlightedStyle[overallStatus].radius); // it is not updated with setStyle
+
+                    // And add the popup to the map
+                    popup.appendTo("#map");                    
+                });
+
+                // mouseout: revert the style back and destroy the popup
+                marker.on("mouseout", function (e) {
+                    marker.setStyle(normalStyle[overallStatus]);
+                    // it is not updated with setStyle
+                    marker.setRadius(normalStyle[overallStatus].radius); 
+                    $("#popup-" + properties.COD).remove();
+                });
+            })(marker, statusInfo, overallStatus, feature.properties);
+
+            return marker;
+        };
+
+        var probeGeoJSONLayer = null;
+        function loadProbesOnMap() {
+            var probeList;
+
+            //$.getJSON("probes.geojson", function (probeList) {
+            //});
+
+            // http://api.jquery.com/jQuery.ajax/
+            $.ajax({
+                type: "POST",
+                url: "probes.geojson",
+                dataType: 'json',
+                data: probeList,
+                success: function (probeList) {
+                    //console.log("Data read, creating the GeoJSON layer\n");
+
+                    // 1- Remove current layer from the map
+                    if (probeGeoJSONLayer != null) {
+                        map.removeLayer(probeGeoJSONLayer);
+                        probeGeoJSONLayer.clearLayers();
+                        delete probeGeoJSONLayer;
+                    }
+                    //probeGeoJSONLayer.addData(probeList);
+                    //probeGeoJSONLayer.addGeoJSON(probeList);
+
+                    // 2- Create the brand new GEOJSON layer
+                    probeGeoJSONLayer = new L.GeoJSON(probeList, {
+                        // link up the function to run when loading each feature
+                        pointToLayer: onEachProbe
+                    });
+
+                    // 3- And add the new layer into the map!!
+                    map.addLayer(probeGeoJSONLayer);
+
+                    // 4- The map will be updated every 10 minutes
+                    setTimeout('loadProbesOnMap()', 10*60000);
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus + ": " + errorThrown + "\n");
+                    // try again in 20 seconds...
+                    setTimeout('loadProbesOnMap()', 30000);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            loadProbesOnMap();
+            // some other jQuery goodness go in here
+        });
+        
+    </script>
+   </div>
+  </div>
+ </body>
+</html>
+

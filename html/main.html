@@ -108,35 +108,44 @@
 
                 // mouseover: highlight the circlemarker. Create and show a popup
                 marker.on("mouseover", function (e) {
-                    var markerCoords = marker.getLatLng()
+                    var markerCoords = marker.getLatLng();
+                    var _top;
+                    var _right = -1;
+                    var _left = -1;
+                    var popup_css_class = 'triangle-isosceles';
 
                     // Create a popup with a unique ID linked to this record
-                    if (e.containerPoint.x < (map.getSize().x / 2)) {
-                        var popup = $("<div></div>", {
-                            id: "popup-" + properties.COD,
-                            css: {
-                                position: "absolute",
-                                //top: e.containerPoint.y - 60 + "px",
-                                //left: e.containerPoint.x - 35 + "px",
-                                top: map.latLngToContainerPoint(markerCoords).y - 90 + "px",
-                                left: map.latLngToContainerPoint(markerCoords).x - 35 + "px"
-                            }
-                        });
-                        var html_text = "<div class=\"triangle-isosceles\"><b>" + properties.NAME + "</b> a la";
+                    if (e.containerPoint.x < (map.getSize().x / 4)) {
+                        popup_css_class = "triangle-isosceles";
+                        _top = map.latLngToContainerPoint(markerCoords).y - 90 + "px";
+                        _left = map.latLngToContainerPoint(markerCoords).x - 35 + "px";
+                    } else if  (e.containerPoint.x < ((map.getSize().x / 4)*2)) {
+                        popup_css_class = "triangle-isosceles leftc";                        
+                        _top = map.latLngToContainerPoint(markerCoords).y - 90 + "px";
+                        _left = map.latLngToContainerPoint(markerCoords).x - 70 + "px";
+                    } else if  (e.containerPoint.x < ((map.getSize().x / 4)*3)) {
+                        popup_css_class = "triangle-isosceles rightc";
+                        _top = map.latLngToContainerPoint(markerCoords).y - 90 + "px";
+                        _right = map.getSize().x - map.latLngToContainerPoint(markerCoords).x - 70 + "px";
                     } else {
-                        var popup = $("<div></div>", {
-                            id: "popup-" + properties.COD,
-                            css: {
-                                position: "absolute",
-                                top: map.latLngToContainerPoint(markerCoords).y - 90 + "px",
-                                right: map.getSize().x - map.latLngToContainerPoint(markerCoords).x - 35 + "px"
-                            }
-                        });
-                        var html_text = "<div class=\"triangle-isosceles right\"><b>" + properties.NAME + "</b> a la";
+                        popup_css_class = "triangle-isosceles right";
+                        _top = map.latLngToContainerPoint(markerCoords).y - 90 + "px";
+                        _right = map.getSize().x - map.latLngToContainerPoint(markerCoords).x - 35 + "px";
                     }
+                    
+                    var popup = $("<div></div>", {
+                        id: "popup-" + properties.COD,
+                        css: {
+                            position: "absolute",
+                            top: _top,
+                            right: (_right == -1) ? 'auto' : _right,
+                            left: (_left == -1) ? 'auto' : _left,
+                        }
+                    });                    
                     
                     var d = new Date(0); // set the date to the beginning of times
                     d.setUTCSeconds(properties.DATE);
+                    var html_text = "<div class=\"" + popup_css_class + "\"><b>" + properties.NAME + "</b> a la";
                     html_text += (d.getHours() != 1) ? 's ': ' ';
                     html_text += ((d.getHours() < 10) ? '0' + d.getHours(): d.getHours()) + ":" ;
                     html_text += ((d.getMinutes() < 10) ? '0' + d.getMinutes(): d.getMinutes());
@@ -256,4 +265,3 @@
   </div>
  </body>
 </html>
-

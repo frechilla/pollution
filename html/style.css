@@ -111,6 +111,7 @@ html, body, #map {
  width: 14px;
  height: 14px;
  /* width and height can be anything, as long as they're equal */
+ behavior: url(PIE.htc); /* IE 7 support */
 }
 .circle#circle-0 {
  background: lightgrey;
@@ -150,36 +151,45 @@ Dual licensed under MIT and GNU GPLv2 © Nicolas Gallagher  */
 
 /* BUBBLE WITH AN ISOCELES TRIANGLE */
 .triangle-isosceles {
-	font-size:14px;
-	font-family: Verdana, Tahoma, Helvetica, Arial, sans-serif;
-	position:relative;
-	padding:10px;
-	margin:0 0 0;/* 1em 0 3em; */
-	color:#FFF;
-    white-space: nowrap; /* content must be in one line, even if it goes outside the map */
-	/* css3 */
-	background: rgba(51,51,51,0.85); /* #333 plus transparency */
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;
+ font-size:14px;
+ font-family: Verdana, Tahoma, Helvetica, Arial, sans-serif;
+ position:relative;
+ padding:10px;
+ margin:0 0 0;/* 1em 0 3em; */
+ color:#FFF;
+ white-space: nowrap; /* content must be in one line, even if it goes outside the map */
+ /* css3 */
+ background: rgba(51,51,51,0.85); /* #333 plus transparency */
+ -webkit-border-radius:10px;
+ -moz-border-radius:10px;
+ border-radius:10px;
 }
 .triangle-isosceles:after {
-	content:"";
-	position:absolute;
-	bottom:-10px; /* value = - border-top-width - border-bottom-width */
-	left:25px; /* controls horizontal position */
-	border-width:10px 10px 0; /* vary these values to change the angle of the vertex */
-	border-style:solid;
-	border-color:rgba(51,51,51,0.90) transparent;
-    /* reduce the damage in FF3.0 */
-    display:block; 
-    width:0;
+ content:"";
+ position:absolute;
+ bottom:-10px; /* value = - border-top-width - border-bottom-width */
+ left:25px; /* controls horizontal position */
+ border-width:10px 10px 0; /* vary these values to change the angle of the vertex */
+ border-style:solid;
+ border-color:rgba(51,51,51,0.90) transparent;
+ /* reduce the damage in FF3.0 */
+ display:block; 
+ width:0;
+}
+.triangle-isosceles.leftc:after {
+ left:60px;
 }
 .triangle-isosceles.right:after {
-    position:absolute;
-    right:25px;
-    bottom:-10px;
-    left:auto;
+ position:absolute;
+ right:25px;
+ bottom:-10px;
+ left:auto;
+}
+.triangle-isosceles.rightc:after {
+ position:absolute;
+ right:60px;
+ bottom:-10px;
+ left:auto;
 }
 
 

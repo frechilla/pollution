@@ -79,6 +79,24 @@ html, body, #map {
  height:100%;
 }
 
+#header{
+ position:relative;
+ background:#222;
+ height: 45px;
+ width:100%;
+ max-height: 45px;
+ z-index:2;
+ box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 1);
+ 
+ /*
+  * Make box-shadow compatible with all browsers:
+  *   http://robertnyman.com/2010/03/16/drop-shadow-with-css-for-all-web-browsers/
+  *
+ -moz-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 1);
+ -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 1);
+ */
+}
+
 #main {
  background:#fff;
  padding-left:200px;
@@ -86,6 +104,7 @@ html, body, #map {
 }
 
 #sidebar {
+ z-index:1;
  position:absolute;
  width:200px;
  height:100%;
@@ -159,7 +178,7 @@ Dual licensed under MIT and GNU GPLv2 © Nicolas Gallagher  */
  color:#FFF;
  white-space: nowrap; /* content must be in one line, even if it goes outside the map */
  /* css3 */
- background: rgba(51,51,51,0.85); /* #333 plus transparency */
+ background: rgba(51,51,51,0.90); /* #333 plus transparency */
  -webkit-border-radius:10px;
  -moz-border-radius:10px;
  border-radius:10px;
@@ -177,7 +196,7 @@ Dual licensed under MIT and GNU GPLv2 © Nicolas Gallagher  */
  width:0;
 }
 .triangle-isosceles.leftc:after {
- left:60px;
+ left:75px;
 }
 .triangle-isosceles.right:after {
  position:absolute;
@@ -187,7 +206,7 @@ Dual licensed under MIT and GNU GPLv2 © Nicolas Gallagher  */
 }
 .triangle-isosceles.rightc:after {
  position:absolute;
- right:60px;
+ right:75px;
  bottom:-10px;
  left:auto;
 }

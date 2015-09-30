@@ -122,11 +122,11 @@
                     } else if  (e.containerPoint.x < ((map.getSize().x / 4)*2)) {
                         popup_css_class = "triangle-isosceles leftc";                        
                         _top = map.latLngToContainerPoint(markerCoords).y - 90 + "px";
-                        _left = map.latLngToContainerPoint(markerCoords).x - 70 + "px";
+                        _left = map.latLngToContainerPoint(markerCoords).x - 85 + "px";
                     } else if  (e.containerPoint.x < ((map.getSize().x / 4)*3)) {
                         popup_css_class = "triangle-isosceles rightc";
                         _top = map.latLngToContainerPoint(markerCoords).y - 90 + "px";
-                        _right = map.getSize().x - map.latLngToContainerPoint(markerCoords).x - 70 + "px";
+                        _right = map.getSize().x - map.latLngToContainerPoint(markerCoords).x - 85 + "px";
                     } else {
                         popup_css_class = "triangle-isosceles right";
                         _top = map.latLngToContainerPoint(markerCoords).y - 90 + "px";

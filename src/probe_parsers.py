@@ -1,8 +1,9 @@
-﻿import urllib
+﻿import urllib2
 from HTMLParser import HTMLParseError
 
 from html_parsers import MadridDotOrgHTMLParser
 from html_parsers import MunimadridDotEsHTMLParser
+from html_parsers import TresCantosDotEsHTMLParser
 from html_parsers import JCCMDotEsHTMLParser
 from html_parsers import AirecantabriaHTMLParser
 from html_parsers import AragonaireHTMLParser
@@ -11,6 +12,9 @@ from probe import ProbeMeasure
 from probe import Probe
 
 from constants import *
+
+HTTP_HEADERS = {
+    'Accept-Language': 'es-ES,es;q=0.8,en;q=0.5' }
 
 
 class ProbeParser():
@@ -127,7 +131,9 @@ class MadridDotOrgLiveProbeParser(ProbeParser):
             print "parsing madrid.org - " + thisProbe.name + "..."
             # ensure the parser is clean to start the parsing process
             self.__html_parser.reset()
-            htmlFile = urllib.urlopen(thisProbe.dataURL)
+
+            req = urllib2.Request(thisProbe.dataURL, data=None, headers=HTTP_HEADERS)
+            htmlFile = urllib2.urlopen(req)
             
             # what character encoding set is this file????
             charset = htmlFile.headers.getparam('charset')
@@ -195,7 +201,72 @@ class MadridDotOrgLiveProbeParser(ProbeParser):
                 print "    Station name doesn't match parsed info: " + \
                     self.__html_parser.m_stationName.decode("utf-8") + "\n"
 
-                
+
+class TresCantosDotEsLiveProbeParser(ProbeParser):
+    """
+        Parser to retrieve probe data from trescantos.es
+        
+        There is just 1 probe in a single URL
+    """
+    
+    def __init__(self):
+        ProbeParser.__init__(self)
+        # the HTML parser info
+        self.__html_parser = TresCantosDotEsHTMLParser()
+        
+        # fill up probe list. Note there is just 1 probe
+        #
+        self.probe_list.append(
+            Probe(u'Tres Cantos', TRESCANTOS_ES_PROBE_TRESCANTOS_URL,
+               TRESCANTOS_ES_PROBE_TRESCANTOS_LAT, TRESCANTOS_ES_PROBE_TRESCANTOS_LON))
+    
+    def update(self):
+        print "parsing trescantos.es..."
+        # ensure the aprser is clean to start the parsing process
+        self.__html_parser.reset()
+
+        req = urllib2.Request(TRESCANTOS_ES_PROBE_TRESCANTOS_URL, data=None, headers=HTTP_HEADERS)
+        htmlFile = urllib2.urlopen(req)
+    
+        # what character encoding set is this file????
+        charset = htmlFile.headers.getparam('charset')
+
+        for line in htmlFile.readlines():
+            # 
+            line = line.strip().decode(charset).encode("utf-8")
+            
+            try:
+                self.__html_parser.feed(line)
+            except HTMLParseError, ex:
+                print "Exception %s" % (ex.msg)
+
+        htmlFile.close()
+
+        thisMeasure = ProbeMeasure()
+        thisMeasure.sample_time = self.__html_parser.m_sampleTime
+
+        if ('NO' in self.__html_parser.m_pollutants):
+            thisMeasure.no = self.__html_parser.m_pollutants['NO']
+        if ('NO2' in self.__html_parser.m_pollutants):
+            thisMeasure.no2 = self.__html_parser.m_pollutants['NO2']
+        if ('SO2' in self.__html_parser.m_pollutants):
+            thisMeasure.so2 = self.__html_parser.m_pollutants['SO2']
+        #TODO
+        #if ('NOX' in self.__html_parser.m_pollutants):
+        #    thisMeasure.nox = self.__html_parser.m_pollutants['NOX']
+        
+        if ('Direccion Viento' in self.__html_parser.m_weatherParams):    
+            thisMeasure.wind_dir = self.__html_parser.m_weatherParams['Direccion Viento']
+        if ('Temperatura' in self.__html_parser.m_weatherParams):    
+            thisMeasure.temp = self.__html_parser.m_weatherParams['Temperatura']
+        if ('Humedad Relativa' in self.__html_parser.m_weatherParams):    
+            thisMeasure.hum = self.__html_parser.m_weatherParams['Humedad Relativa']
+        if ('Radiacion Solar' in self.__html_parser.m_weatherParams):    
+            thisMeasure.solar_rad = self.__html_parser.m_weatherParams['Radiacion Solar']
+        
+        self.probe_list[0].last_measure = thisMeasure
+ 
+ 
 class MunimadridDotEsLiveProbeParser(ProbeParser):
     """
         Parser to retrieve probe data from munimadrid.es
@@ -288,7 +359,9 @@ class MunimadridDotEsLiveProbeParser(ProbeParser):
         print "parsing munimadrid.es..."
         # ensure the aprser is clean to start the parsing process
         self.__html_parser.reset()
-        htmlFile = urllib.urlopen(MUNIMADRID_DOT_ES_PROBE_URL)
+
+        req = urllib2.Request(MUNIMADRID_DOT_ES_PROBE_URL, data=None, headers=HTTP_HEADERS)
+        htmlFile = urllib2.urlopen(req)
     
         # what character encoding set is this file????
         charset = htmlFile.headers.getparam('charset')
@@ -396,7 +469,9 @@ class JCCMDotEsLiveProbeParser(ProbeParser):
             print "parsing jccm.es - " + thisProbe.name + "..."
             # ensure the parser is clean to start the parsing process
             self.__html_parser.reset()
-            htmlFile = urllib.urlopen(thisProbe.dataURL)
+
+            req = urllib2.Request(thisProbe.dataURL, data=None, headers=HTTP_HEADERS)
+            htmlFile = urllib2.urlopen(req)
         
             # what character encoding set is this file????
             charset = htmlFile.headers.getparam('charset')
@@ -500,7 +575,9 @@ class AirecantabriaLiveProbeParser(ProbeParser):
             print "parsing airecantabria.com - " + thisProbe.name + "..."
             # ensure the aprser is clean to start the parsing process
             self.__html_parser.reset()
-            htmlFile = urllib.urlopen(thisProbe.dataURL)
+
+            req = urllib2.Request(thisProbe.dataURL, data=None, headers=HTTP_HEADERS)
+            htmlFile = urllib2.urlopen(req)
         
             # charset detection fails in airecantabria.com
             #charset = htmlFile.headers.getparam('charset')
@@ -604,7 +681,9 @@ class AragonaireDotEsLiveProbeParser(ProbeParser):
             print "parsing aragonaire.es - " + thisProbe.name + "..."
             # ensure the aprser is clean to start the parsing process
             self.__html_parser.reset()
-            htmlFile = urllib.urlopen(thisProbe.dataURL)
+
+            req = urllib2.Request(thisProbe.dataURL, data=None, headers=HTTP_HEADERS)
+            htmlFile = urllib2.urlopen(req)
         
             # charset detection fails in airecantabria.com
             #charset = htmlFile.headers.getparam('charset')

@@ -319,10 +319,112 @@ class  MunimadridDotEsHTMLParser(HTMLParser):
                         second=0, 
                         microsecond=0))
             else:
-                print "Error parsing sample time"
+                print "Error parsing sample time '%s'" % (self.__sampleDaytime)
             
         elif (self.__span_sampledate):
             self.__sampleDaytime = data
+
+
+
+class TresCantosDotEsHTMLParser(HTMLParser):
+    """
+    HTML parser for probe in trescantos.es
+    """
+    pass
+
+    def __init__(self):
+        # call the parent constructor first
+        HTMLParser.__init__(self)
+        self.__initiliaseParser()
+        
+        # regex to parse time
+        self.__datetimeRegex = re.compile('Calidad del Aire - Dia ([0-9]+)/([0-9]+) a la[s]* ([0-9]+):([0-9]+) h.')
+
+    def __initiliaseParser(self):
+        # private data members to parse the data pairs (key + datum)
+        self.__tr = False
+        self.__td = False
+        self.__h3 = False
+        self.__key = ""
+        self.__datum = ""
+        self.__data = ""
+
+        self.m_sampleTime = None
+        try:
+            self.m_pollutants.clear()
+        except AttributeError:
+            self.m_pollutants = {} # empty dict
+        try:
+            self.m_weatherParams.clear()
+        except AttributeError:
+            self.m_weatherParams = {} # empty dict
+        
+    def reset(self):
+        # reset all object's attributes
+        self.__initiliaseParser()
+        # call the parent reset too
+        HTMLParser.reset(self)
+
+    def handle_starttag(self, tag, attrs):
+        if (tag == 'tr'):
+            self.__tr = True
+        elif (tag == 'td'):
+            self.__td = True
+        elif (tag == 'h3'):
+            self.__h3 = True
+
+    def handle_endtag(self, tag):
+        if (tag == 'tr'):
+             self.__tr = False
+             self.__key = self.__datum = ""
+        elif (tag == 'td'):
+            if (self.__key == ""):
+                self.__key = self.__data
+            elif (self.__data != ""):
+                self.__datum = self.__data
+                if (self.__key == 'Direccin Viento'):
+                    self.m_weatherParams['Direccion Viento'] = self.__datum
+                elif (self.__key == 'NO'):
+                    self.m_pollutants['NO'] = self.__datum
+                elif (self.__key == 'Temperatura'):
+                    self.m_weatherParams['Temperatura'] = self.__datum
+                elif (self.__key == 'NO2'):
+                    self.m_pollutants['NO2'] = self.__datum
+                elif (self.__key == 'HR'):
+                    self.m_weatherParams['Humedad Relativa'] = self.__datum
+                elif (self.__key == 'NOX'):
+                    self.m_pollutants['NOX'] = self.__datum
+                elif (self.__key == 'Radiacin Solar'):
+                    self.m_weatherParams['Radiacion Solar'] = self.__datum
+                elif (self.__key == 'SO2'):
+                    self.m_pollutants['SO2'] = self.__datum
+                else:
+                    self.__key = self.__data
+                    self.__datum = ""
+                if (self.__datum != ""):
+                    self.__key = self.__datum = ""
+            self.__data = ""
+            self.__td = False
+        elif (tag == 'h3'):
+            self.__h3 = False
+
+    def handle_data(self, data):
+        if (self.__tr):
+            self.__data += data.strip()
+        elif (self.__h3):
+            result = self.__datetimeRegex.search(data.strip())
+            if (result != None):
+                madrid = pytz.timezone('Europe/Madrid')
+                self.m_sampleTime = madrid.localize(datetime(
+                        year = datetime.now().year,
+                        month = int(result.group(2)),
+                        day = int(result.group(1)),
+                        hour= int(result.group(3)),
+                        minute= int(result.group(4)),
+                        second=0, 
+                        microsecond=0))
+            else:
+                print "Error parsing sample time '%s'" % (data.strip())
 
 
 

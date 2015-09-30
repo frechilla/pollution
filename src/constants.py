@@ -188,6 +188,14 @@ MADRID_DOT_ORG_PROBE_ORUSCO_LAT = 40.286944 # 40º17'13"N (no need to move. "Rep
 MADRID_DOT_ORG_PROBE_ORUSCO_LON = -3.222222 # 03º13'20"W (good enough according to http://gestiona.madrid.org/ICMdownload/m24.jpg)
 
 
+# trescantos.es
+#
+#
+TRESCANTOS_ES_PROBE_TRESCANTOS_URL = 'http://www.trescantos.es/portal/jozono.php'
+TRESCANTOS_ES_PROBE_TRESCANTOS_LAT = 40.597282 # 40º35'50"N
+TRESCANTOS_ES_PROBE_TRESCANTOS_LON = -3.709734 # 03º42'35"W
+
+
 # jccm.es
 #   List of probes: http://pagina.jccm.es/medioambiente/rvca/estaciones/caseta/intro_casetas.htm
 #

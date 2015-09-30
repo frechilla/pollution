@@ -20,6 +20,7 @@ from probe_parsers import JCCMDotEsLiveProbeParser
 from probe_parsers import AirecantabriaLiveProbeParser
 from probe_parsers import AragonaireDotEsLiveProbeParser
 from probe_parsers import AsturiasDotEsLiveProbeParser
+from probe_parsers import TresCantosDotEsLiveProbeParser
 
 from probe import qairStatus_SO2
 from probe import qairStatus_O3
@@ -45,6 +46,7 @@ def D_printParam(name, value):
 # list of probe parsers
 probe_parser_list = []
 probe_parser_list.append(MadridDotOrgLiveProbeParser()) # madrid.org
+probe_parser_list.append(TresCantosDotEsLiveProbeParser()) # trescantos.es
 probe_parser_list.append(MunimadridDotEsLiveProbeParser()) # munimadrid.es
 probe_parser_list.append(JCCMDotEsLiveProbeParser()) # jccm.es
 probe_parser_list.append(AragonaireDotEsLiveProbeParser()) # aragonaire.es

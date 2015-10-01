@@ -1,0 +1,915 @@
+Estación de Alcalá de Henares
+10:00
+{'CO': '0.4', 
+'PM10': '51', 
+'NO': '30', 
+'TIN': '22.0', 
+'SO2': '9', 
+'O3': '26', 
+'NO2': '72'}
+{'Temperatura': '25.8', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '18', 
+'Velocidad viento': '1.0', 
+'Presi\xc3\xb3n': '937', 
+'Humedad relativa': '22', 
+'Radiaci\xc3\xb3n solar': '545'}
+
+Time: 10:00
+CO: 0.4
+NO: 30
+NO2: 72
+SO2: 9
+PM25: None
+PM10: 51
+O3: 26
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 1.0
+Wind dir: 18
+Temp: 25.8
+Hum: 22
+Pressure: 937
+Solar radiation: 545
+Precipitation: 0.0
+
+
+Estación de Alcobendas
+10:00
+{'CO': '0.5', 
+'HCT': '7.8', 
+'PM10': '31', 
+'NO': '47', 
+'HNM': '0.8', 
+'XIL': '2.8', 
+'TIN': '22.6', 
+'SO2': '5', 
+'TOL': '4.7', 
+'BEN': '1.0', 
+'O3': '24', 
+'NO2': '90'}
+{'Temperatura': '24.1', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '108', 
+'Velocidad viento': '1.4', 
+'Presi\xc3\xb3n': '939', 
+'Humedad relativa': '30', 
+'Radiaci\xc3\xb3n solar': '417'}
+
+Time: 10:00
+CO: 0.5
+NO: 47
+NO2: 90
+SO2: 5
+PM25: None
+PM10: 31
+O3: 24
+TOL: 4.7
+BEN: 1.0
+XYL: 2.8
+
+Wind speed: 1.4
+Wind dir: 108
+Temp: 24.1
+Hum: 30
+Pressure: 939
+Solar radiation: 417
+Precipitation: 0.0
+
+
+Estación de Torrejón de Ardoz
+10:00
+{'BEN': '0.4', 
+'CO': '0.3', 
+'PM10': '65', 
+'NO': '8', 
+'XIL': '0.5', 
+'TIN': '19.3', 
+'TOL': '1.5', 
+'PM2,5': '12', 
+'O3': '62', 
+'NO2': '42'}
+{'Temperatura': '23.2', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '173', 
+'Velocidad viento': '0.8', 
+'Presi\xc3\xb3n': '926', 
+'Humedad relativa': '26', 
+'Radiaci\xc3\xb3n solar': '356'}
+
+Time: 10:00
+CO: 0.3
+NO: 8
+NO2: 42
+SO2: None
+PM25: 12
+PM10: 65
+O3: 62
+TOL: 1.5
+BEN: 0.4
+XYL: 0.5
+
+Wind speed: 0.8
+Wind dir: 173
+Temp: 23.2
+Hum: 26
+Pressure: 926
+Solar radiation: 356
+Precipitation: 0.0
+
+
+Estación de Coslada
+10:00
+{'PM10': '70', 
+'NO': '', 
+'TIN': '23.8', 
+'SO2': '', 
+'O3': '', 
+'NO2': ''}
+{'Temperatura': '21.9', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '53', 
+'Velocidad viento': '0.7', 
+'Presi\xc3\xb3n': '925', 
+'Humedad relativa': '28', 
+'Radiaci\xc3\xb3n solar': '242'}
+
+Time: 10:00
+CO: None
+NO: 
+NO2: 
+SO2: 
+PM25: None
+PM10: 70
+O3: 
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 0.7
+Wind dir: 53
+Temp: 21.9
+Hum: 28
+Pressure: 925
+Solar radiation: 242
+Precipitation: 0.0
+
+
+Estación de Arganda del Rey
+10:00
+{'CO': '0.4', 
+'PM10': '78', 
+'NO': '19', 
+'XIL': '13.9', 
+'TIN': '16.4', 
+'TOL': '16.1', 
+'BEN': '1.0', 
+'O3': '43', 
+'NO2': '47'}
+{'Temperatura': '23.4', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '204', 
+'Velocidad viento': '1.7', 
+'Presi\xc3\xb3n': '947', 
+'Humedad relativa': '29', 
+'Radiaci\xc3\xb3n solar': '332'}
+
+Time: 10:00
+CO: 0.4
+NO: 19
+NO2: 47
+SO2: None
+PM25: None
+PM10: 78
+O3: 43
+TOL: 16.1
+BEN: 1.0
+XYL: 13.9
+
+Wind speed: 1.7
+Wind dir: 204
+Temp: 23.4
+Hum: 29
+Pressure: 947
+Solar radiation: 332
+Precipitation: 0.0
+
+
+Estación de Rivas Vaciamadrid
+10:00
+{'TIN': '17.5', 
+'O3': '60', 
+'PM10': '39', 
+'NO2': '9', 
+'NO': '8'}
+{'Temperatura': '24.9', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '175', 
+'Velocidad viento': '2.8', 
+'Presi\xc3\xb3n': '946', 
+'Humedad relativa': '30', 
+'Radiaci\xc3\xb3n solar': '352'}
+
+Time: 10:00
+CO: None
+NO: 8
+NO2: 9
+SO2: None
+PM25: None
+PM10: 39
+O3: 60
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 2.8
+Wind dir: 175
+Temp: 24.9
+Hum: 30
+Pressure: 946
+Solar radiation: 352
+Precipitation: 0.0
+
+
+Estación de Algete
+10:00
+{'BEN': '1.5', 
+'CO': '0.3', 
+'PM10': '41', 
+'NO': '6', 
+'O3Q': '61', 
+'XIL': '0.8', 
+'TIN': '24.2', 
+'TOL': '2.4', 
+'PM2,5': '11', 
+'O3': '64', 
+'NO2': '29'}
+{'Temperatura': '24.6', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '123', 
+'Velocidad viento': '1.8', 
+'Presi\xc3\xb3n': '934', 
+'Humedad relativa': '26', 
+'Radiaci\xc3\xb3n solar': '389'}
+
+Time: 10:00
+CO: 0.3
+NO: 6
+NO2: 29
+SO2: None
+PM25: 11
+PM10: 41
+O3: 64
+TOL: 2.4
+BEN: 1.5
+XYL: 0.8
+
+Wind speed: 1.8
+Wind dir: 123
+Temp: 24.6
+Hum: 26
+Pressure: 934
+Solar radiation: 389
+Precipitation: 0.0
+
+
+Estación de Getafe
+10:00
+{'BEN': '0.5', 
+'PM10': '68', 
+'NO': '27', 
+'XIL': '1.0', 
+'TIN': '25.6', 
+'TOL': '2.9', 
+'O3': '30', 
+'NO2': '74'}
+{'Temperatura': '25.6', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '211', 
+'Velocidad viento': '1.4', 
+'Presi\xc3\xb3n': '925', 
+'Humedad relativa': '32', 
+'Radiaci\xc3\xb3n solar': '266'}
+
+Time: 10:00
+CO: None
+NO: 27
+NO2: 74
+SO2: None
+PM25: None
+PM10: 68
+O3: 30
+TOL: 2.9
+BEN: 0.5
+XYL: 1.0
+
+Wind speed: 1.4
+Wind dir: 211
+Temp: 25.6
+Hum: 32
+Pressure: 925
+Solar radiation: 266
+Precipitation: 0.0
+
+
+Estación de Leganés
+10:00
+{'CO': '0.3', 
+'PM10': '65', 
+'NO': '39', 
+'TIN': '21.0', 
+'O3': '40', 
+'NO2': '88'}
+{'Temperatura': '24.1', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '249', 
+'Velocidad viento': '0.5', 
+'Presi\xc3\xb3n': '926', 
+'Humedad relativa': '30', 
+'Radiaci\xc3\xb3n solar': '225'}
+
+Time: 10:00
+CO: 0.3
+NO: 39
+NO2: 88
+SO2: None
+PM25: None
+PM10: 65
+O3: 40
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 0.5
+Wind dir: 249
+Temp: 24.1
+Hum: 30
+Pressure: 926
+Solar radiation: 225
+Precipitation: 0.0
+
+
+Estación de Fuenlabrada
+10:00
+{'BEN': '0.4', 
+'HCT': '5.9', 
+'PM10': '69', 
+'NO': '5', 
+'HNM': '0.7', 
+'XIL': '3.0', 
+'TIN': '22.2', 
+'SO2': '3', 
+'TOL': '7.5', 
+'O3': '73', 
+'NO2': '30'}
+{'Temperatura': '24.0', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '239', 
+'Velocidad viento': '2.3', 
+'Presi\xc3\xb3n': '920', 
+'Humedad relativa': '26', 
+'Radiaci\xc3\xb3n solar': '291'}
+
+Time: 10:00
+CO: None
+NO: 5
+NO2: 30
+SO2: 3
+PM25: None
+PM10: 69
+O3: 73
+TOL: 7.5
+BEN: 0.4
+XYL: 3.0
+
+Wind speed: 2.3
+Wind dir: 239
+Temp: 24.0
+Hum: 26
+Pressure: 920
+Solar radiation: 291
+Precipitation: 0.0
+
+
+Estación de Móstoles
+10:00
+{'CO': '0.5', 
+'PM10': '40', 
+'NO': '10', 
+'TIN': '23.1', 
+'SO2': '4', 
+'O3': '59', 
+'NO2': '37'}
+{'Temperatura': '23.2', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '182', 
+'Velocidad viento': '1.8', 
+'Presi\xc3\xb3n': '922', 
+'Humedad relativa': '25', 
+'Radiaci\xc3\xb3n solar': '370'}
+
+Time: 10:00
+CO: 0.5
+NO: 10
+NO2: 37
+SO2: 4
+PM25: None
+PM10: 40
+O3: 59
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 1.8
+Wind dir: 182
+Temp: 23.2
+Hum: 25
+Pressure: 922
+Solar radiation: 370
+Precipitation: 0.0
+
+
+Estación de Alcorcón
+10:00
+{'PM10': '47', 
+'NO': '7', 
+'TIN': '23.1', 
+'PM2,5': '13', 
+'O3': '65', 
+'NO2': '44'}
+{'Temperatura': '23.2', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '205', 
+'Velocidad viento': '1.0', 
+'Presi\xc3\xb3n': '917', 
+'Humedad relativa': '28', 
+'Radiaci\xc3\xb3n solar': '295'}
+
+Time: 10:00
+CO: None
+NO: 7
+NO2: 44
+SO2: None
+PM25: 13
+PM10: 47
+O3: 65
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 1.0
+Wind dir: 205
+Temp: 23.2
+Hum: 28
+Pressure: 917
+Solar radiation: 295
+Precipitation: 0.0
+
+
+Estación de Aranjuez
+10:00
+{'TIN': '20.1', 
+'O3': '42', 
+'PM10': '70', 
+'NO2': '32', 
+'NO': '12'}
+{'Temperatura': '24.0', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '294', 
+'Velocidad viento': '0.8', 
+'Presi\xc3\xb3n': '944', 
+'Humedad relativa': '36', 
+'Radiaci\xc3\xb3n solar': '411'}
+
+Time: 10:00
+CO: None
+NO: 12
+NO2: 32
+SO2: None
+PM25: None
+PM10: 70
+O3: 42
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 0.8
+Wind dir: 294
+Temp: 24.0
+Hum: 36
+Pressure: 944
+Solar radiation: 411
+Precipitation: 0.0
+
+
+Estación de Valdemoro
+10:00
+{'PM10': '65', 
+'NO': '3', 
+'TIN': '19.7', 
+'PM2,5': '8', 
+'O3': '65', 
+'NO2': '26'}
+{'Temperatura': '24.5', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '31', 
+'Velocidad viento': '2.8', 
+'Presi\xc3\xb3n': '946', 
+'Humedad relativa': '31', 
+'Radiaci\xc3\xb3n solar': '272'}
+
+Time: 10:00
+CO: None
+NO: 3
+NO2: 26
+SO2: None
+PM25: 8
+PM10: 65
+O3: 65
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 2.8
+Wind dir: 31
+Temp: 24.5
+Hum: 31
+Pressure: 946
+Solar radiation: 272
+Precipitation: 0.0
+
+
+Estación de Colmenar Viejo
+10:00
+{'CO': '0.4', 
+'PM10': '42', 
+'NO': '27', 
+'TIN': '23.1', 
+'O3': '40', 
+'NO2': '76'}
+{'Temperatura': '20.5', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '109', 
+'Velocidad viento': '1.4', 
+'Presi\xc3\xb3n': '914', 
+'Humedad relativa': '27', 
+'Radiaci\xc3\xb3n solar': '299'}
+
+Time: 10:00
+CO: 0.4
+NO: 27
+NO2: 76
+SO2: None
+PM25: None
+PM10: 42
+O3: 40
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 1.4
+Wind dir: 109
+Temp: 20.5
+Hum: 27
+Pressure: 914
+Solar radiation: 299
+Precipitation: 0.0
+
+
+Estación de Majadahonda
+10:00
+{'TIN': '21.2', 
+'O3': '72', 
+'PM10': '32', 
+'NO2': '39', 
+'NO': '7'}
+{'Temperatura': '24.7', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '316', 
+'Velocidad viento': '1.8', 
+'Presi\xc3\xb3n': '942', 
+'Humedad relativa': '36', 
+'Radiaci\xc3\xb3n solar': '489'}
+
+Time: 10:00
+CO: None
+NO: 7
+NO2: 39
+SO2: None
+PM25: None
+PM10: 32
+O3: 72
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 1.8
+Wind dir: 316
+Temp: 24.7
+Hum: 36
+Pressure: 942
+Solar radiation: 489
+Precipitation: 0.0
+
+
+Estación de Collado Villalba
+10:00
+{'BEN': '2.3', 
+'CO': '0.4', 
+'HCT': '8.5', 
+'PM10': '60', 
+'NO': '16', 
+'HNM': '0.6', 
+'XIL': '8.6', 
+'TIN': '14.1', 
+'SO2': '5', 
+'TOL': '16.2', 
+'PM2,5': '39', 
+'O3': '55', 
+'NO2': '59'}
+{'Temperatura': '24.9', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '182', 
+'Velocidad viento': '1.0', 
+'Presi\xc3\xb3n': '916', 
+'Humedad relativa': '22', 
+'Radiaci\xc3\xb3n solar': '382'}
+
+Time: 10:00
+CO: 0.4
+NO: 16
+NO2: 59
+SO2: 5
+PM25: 39
+PM10: 60
+O3: 55
+TOL: 16.2
+BEN: 2.3
+XYL: 8.6
+
+Wind speed: 1.0
+Wind dir: 182
+Temp: 24.9
+Hum: 22
+Pressure: 916
+Solar radiation: 382
+Precipitation: 0.0
+
+
+Estación de Guadalix de la Sierra
+10:00
+{'TIN': '24.1', 
+'O3': '73', 
+'PM10': '23', 
+'NO2': '23', 
+'NO': '5'}
+{'Temperatura': '23.4', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '93', 
+'Velocidad viento': '1.2', 
+'Presi\xc3\xb3n': '948', 
+'Humedad relativa': '25', 
+'Radiaci\xc3\xb3n solar': '319'}
+
+Time: 10:00
+CO: None
+NO: 5
+NO2: 23
+SO2: None
+PM25: None
+PM10: 23
+O3: 73
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 1.2
+Wind dir: 93
+Temp: 23.4
+Hum: 25
+Pressure: 948
+Solar radiation: 319
+Precipitation: 0.0
+
+
+Estación de El Atazar
+10:00
+{'BEN': '', 
+'CO': '', 
+'HCT': '', 
+'PM10': '', 
+'NO': '', 
+'HNM': '', 
+'XIL': '', 
+'TIN': '', 
+'SO2': '', 
+'TOL': '', 
+'PM2,5': '', 
+'O3': '', 
+'NO2': ''}
+{'Temperatura': '', 
+'Precipitaci\xc3\xb3n': '', 
+'Direcci\xc3\xb3n viento': '', 
+'Velocidad viento': '', 
+'Presi\xc3\xb3n': '', 
+'Humedad relativa': '', 
+'Radiaci\xc3\xb3n solar': ''}
+
+Time: 10:00
+CO: 
+NO: 
+NO2: 
+SO2: 
+PM25: 
+PM10: 
+O3: 
+TOL: 
+BEN: 
+XYL: 
+
+Wind speed: 
+Wind dir: 
+Temp: 
+Hum: 
+Pressure: 
+Solar radiation: 
+Precipitation: 
+
+
+Estación de San Martín de Valdeiglesias
+10:00
+{'TIN': '23.0', 
+'O3': '103', 
+'PM10': '24', 
+'NO2': '8', 
+'NO': '1'}
+{'Temperatura': '24.6', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '235', 
+'Velocidad viento': '1.4', 
+'Presi\xc3\xb3n': '937', 
+'Humedad relativa': '114', 
+'Radiaci\xc3\xb3n solar': '331'}
+
+Time: 10:00
+CO: None
+NO: 1
+NO2: 8
+SO2: None
+PM25: None
+PM10: 24
+O3: 103
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 1.4
+Wind dir: 235
+Temp: 24.6
+Hum: 114
+Pressure: 937
+Solar radiation: 331
+Precipitation: 0.0
+
+
+Estación de Villa del Prado
+10:00
+{'CO': '0.3', 
+'PM10': '27', 
+'NO': '3', 
+'O3Q': '72', 
+'TIN': '19.6', 
+'SO2': '2', 
+'PM2,5': '10', 
+'O3': '78', 
+'NO2': '15'}
+{'Temperatura': '23.4', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '224', 
+'Velocidad viento': '1.1', 
+'Presi\xc3\xb3n': '959', 
+'Humedad relativa': '29', 
+'Radiaci\xc3\xb3n solar': '377'}
+
+Time: 10:00
+CO: 0.3
+NO: 3
+NO2: 15
+SO2: 2
+PM25: 10
+PM10: 27
+O3: 78
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 1.1
+Wind dir: 224
+Temp: 23.4
+Hum: 29
+Pressure: 959
+Solar radiation: 377
+Precipitation: 0.0
+
+
+Estación de Villarejo de Salvanés
+10:00
+{'PM10': '43', 
+'NO': '1', 
+'TIN': '19.4', 
+'PM2,5': '22', 
+'O3': '93', 
+'NO2': '5'}
+{'Temperatura': '23.6', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '237', 
+'Velocidad viento': '2.1', 
+'Presi\xc3\xb3n': '928', 
+'Humedad relativa': '27', 
+'Radiaci\xc3\xb3n solar': '412'}
+
+Time: 10:00
+CO: None
+NO: 1
+NO2: 5
+SO2: None
+PM25: 22
+PM10: 43
+O3: 93
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 2.1
+Wind dir: 237
+Temp: 23.6
+Hum: 27
+Pressure: 928
+Solar radiation: 412
+Precipitation: 0.0
+
+
+Estación de Orusco de Tajuña
+10:00
+{'CO': '0.1', 
+'PM10': '22', 
+'NO': '1', 
+'TIN': '22.6', 
+'SO2': '5', 
+'O3': '90', 
+'NO2': '6'}
+{'Temperatura': '22.6', 
+'Precipitaci\xc3\xb3n': '0.0', 
+'Direcci\xc3\xb3n viento': '186', 
+'Velocidad viento': '2.6', 
+'Presi\xc3\xb3n': '923', 
+'Humedad relativa': '27', 
+'Radiaci\xc3\xb3n solar': '349'}
+
+Time: 10:00
+CO: 0.1
+NO: 1
+NO2: 6
+SO2: 5
+PM25: None
+PM10: 22
+O3: 90
+TOL: None
+BEN: None
+XYL: None
+
+Wind speed: 2.6
+Wind dir: 186
+Temp: 22.6
+Hum: 27
+Pressure: 923
+Solar radiation: 349
+Precipitation: 0.0
+{'CO': '1.20', 'TOL': '',      'PM10': '',   'SO2': '10',   'PM2.5': '',    'Estaci\xc3\xb3n': 'PLAZA ESPA\xc3\x91A',   'BEN': '',      'O3': '',   'NO2': '121'}
+{'CO': '0.90', 'TOL': '13.30', 'PM10': '86', 'SO2': '7',    'PM2.5': '31',  'Estaci\xc3\xb3n': 'ESCUELAS AGUIRRE',      'BEN': '4.40',  'O3': '7',  'NO2': '106'}
+{'CO': '',     'TOL': '11.10', 'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'AVDA. RAMON Y CAJAL',   'BEN': '3.60',  'O3': '',   'NO2': '122'}
+{'CO': '0.70', 'TOL': '',      'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'ARTURO SORIA',          'BEN': '',      'O3': '6',  'NO2': '112'}
+{'CO': '',     'TOL': '',      'PM10': '',   'SO2': '6',    'PM2.5': '',    'Estaci\xc3\xb3n': 'VILLAVERDE',            'BEN': '',      'O3': '6',  'NO2': '83'}
+{'CO': '0.80', 'TOL': '4.80',  'PM10': '68', 'SO2': '6',    'PM2.5': '',    'Estaci\xc3\xb3n': 'FAROLILLO',             'BEN': '0.60',  'O3': '3',  'NO2': '85'}
+{'CO': '0.50', 'TOL': '2.50',  'PM10': '44', 'SO2': '4',    'PM2.5': '22',  'Estaci\xc3\xb3n': 'CASA DE CAMPO',         'BEN': '1.00',  'O3': '10', 'NO2': '90'}
+{'CO': '',     'TOL': '',      'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'BARAJAS PUEBLO',        'BEN': '',      'O3': '14', 'NO2': '72'}
+{'CO': '0.80', 'TOL': '',      'PM10': '',   'SO2': '8',    'PM2.5': '',    'Estaci\xc3\xb3n': 'PLAZA DEL CARMEN',      'BEN': '',      'O3': '8',  'NO2': '120'}
+{'CO': '0.50', 'TOL': '',      'PM10': '55', 'SO2': '3',    'PM2.5': '',    'Estaci\xc3\xb3n': 'MORATALAZ',             'BEN': '',      'O3': '',   'NO2': '92'}
+{'CO': '',     'TOL': '14.40', 'PM10': '71', 'SO2': '',     'PM2.5': '29',  'Estaci\xc3\xb3n': 'CUATRO CAMINOS',        'BEN': '2.60',  'O3': '',   'NO2': '99'}
+{'CO': '0.50', 'TOL': '',      'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'BARRIO DEL PILAR',      'BEN': '',      'O3': '10', 'NO2': '91'}
+{'CO': '',     'TOL': '',      'PM10': '55', 'SO2': '4',    'PM2.5': '',    'Estaci\xc3\xb3n': 'PUENTE DE VALLECAS',    'BEN': '',      'O3': '',   'NO2': '85'}
+{'CO': '',     'TOL': '',      'PM10': '78', 'SO2': '',     'PM2.5': '30',  'Estaci\xc3\xb3n': 'MENDEZ ALVARO',         'BEN': '',      'O3': '',   'NO2': '114'}
+{'CO': '',     'TOL': '',      'PM10': '42', 'SO2': '',     'PM2.5': '1',   'Estaci\xc3\xb3n': 'CASTELLANA',            'BEN': '',      'O3': '',   'NO2': '111'}
+{'CO': '',     'TOL': '',      'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'RETIRO',                'BEN': '',      'O3': '2',  'NO2': '79'}
+{'CO': '',     'TOL': '',      'PM10': '65', 'SO2': '',     'PM2.5': '21',  'Estaci\xc3\xb3n': 'PLAZA DE CASTILLA',     'BEN': '',      'O3': '',   'NO2': '125'}
+{'CO': '',     'TOL': '',      'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'ENSANCHE DE VALLECAS',  'BEN': '',      'O3': '38', 'NO2': '44'}
+{'CO': '',     'TOL': '7.60',  'PM10': '41', 'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'URBANIZACION EMBAJADA', 'BEN': '0.70',  'O3': '',   'NO2': '89'}
+{'CO': '1.00', 'TOL': '',      'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'FERNANDEZ LADREDA',     'BEN': '',      'O3': '4',  'NO2': '137'}
+{'CO': '0.60', 'TOL': '',      'PM10': '77', 'SO2': '8',    'PM2.5': '',    'Estaci\xc3\xb3n': 'SANCHINARRO',           'BEN': '',      'O3': '',   'NO2': '95'}
+{'CO': '',     'TOL': '',      'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'EL PARDO',              'BEN': '',      'O3': '24', 'NO2': '37'}
+{'CO': '',     'TOL': '',      'PM10': '',   'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'JUAN CARLOS I',         'BEN': '',      'O3': '11', 'NO2': '73'}
+{'CO': '',     'TOL': '',      'PM10': '56', 'SO2': '',     'PM2.5': '',    'Estaci\xc3\xb3n': 'TRES OLIVOS',           'BEN': '',      'O3': '6',  'NO2': '90'}
+{'CO': '0.70', 'TOL': '9.00',  'PM10': '61', 'SO2': '6',    'PM2.5': '23',  'Estaci\xc3\xb3n': 'MEDIA  RED',            'BEN': '2.20',  'O3': '10', 'NO2': '95'}
+Generating HTML...

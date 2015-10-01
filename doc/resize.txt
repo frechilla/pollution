@@ -1,0 +1,6 @@
+﻿resize map when resizing window
+
+invalidateSize at http://leaflet.cloudmade.com/reference.html
+
+http://koti.mbnet.fi/ojalesa/exam/autosize.html
+http://www.wolfpil.de/v3/map-in-a-box.html#

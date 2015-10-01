@@ -1,0 +1,147 @@
+﻿(http://www.getafe.es/MAMBIENTE/delegacion/Cambio_Climatico/Calidad_del_Aire/Calidad_del_Aire.home)
+
+       Muy buena  Buena         Aceptable      Mala
+
+SO2    < 40       ≥ 40 y ≤ 80   ≥ 80 y ≤ 120   ≥ 120
+
+NO2    < 40       ≥ 40 y ≤ 80   ≥ 80 y ≤ 120   ≥ 120
+
+CO     < 5        ≥ 5 y ≤ 10    ≥ 10 y ≤ 15    ≥ 15
+
+O3     < 35       ≥ 35 y ≤ 65   ≥ 65 y ≤ 110   ≥ 110
+
+
+http://www.miliarium.com/prontuario/Indices/IndiceCalidadAire.htm
+http://www.ciemat.es/MCAportal/portal.do?TR=C&IDR=69
+http://www.mambiente.munimadrid.es/opencms/opencms/calaire/ContaAtmosferica/LosContaminantes/valoreslimite.html
+http://www.troposfera.org
+
+
+
+http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:32008L0050:ES:NOT
+
+ANEXO II
+
+Determinación de los requisitos de evaluación de las concentraciones de dióxido de azufre, dióxido de nitrógeno y óxidos de nitrógeno, partículas (PM10 y PM2,5), plomo, benceno y monóxido de carbono en el aire ambiente dentro de una zona o aglomeración
+
+A. Umbrales superior e inferior de evaluación
+
+Se aplicarán los siguientes umbrales superior e inferior de evaluación:
+
+1. Dióxido de azufre
+
+| Protección de la salud | Protección de la vegetación |
+
+Umbral superior de evaluación | 60 % del valor límite diario (75 µg/m3, que no podrá superarse más de 3 veces por año civil) | 60 % del nivel crítico de invierno (12 µg/m3) |
+
+Umbral inferior de evaluación | 40 % del valor límite diario (50 µg/m3, que no podrá superarse más de 3 veces por año civil) | 40 % del nivel crítico de invierno (8 µg/m3) |
+
+2. Dióxido de nitrógeno y óxidos de nitrógeno
+
+| Valor límite horario para la protección de la salud humana (NO2) | Valor límite anual para la protección de la salud humana (NO2) | Nivel crítico anual para la protección de la vegetación y los ecosistemas naturales (NOx) |
+
+Umbral superior de evaluación | 70 % del valor límite (140 µg/m3, que no podrá superarse más de 18 veces por año civil) | 80 % del valor límite (32 µg/m3) | 80 % del nivel crítico (24 µg/m3) |
+
+Umbral inferior de evaluación | 50 % del valor límite (100 µg/m3, que no podrá superarse más de 18 veces por año civil) | 65 % del valor límite (26 µg/m3) | 65 % del nivel crítico (19,5 µg/m3) |
+
+3. Partículas (PM10/PM2,5)
+
+| MEDIA de 24 horas PM10 | MEDIA anual PM10 | MEDIA anual PM2,5 [1] |
+
+Umbral superior de evaluación | 70 % del valor límite (35 µg/m3, que no podrá superarse más de 35 veces por año civil) | 70 % del valor límite (28 µg/m3) | 70 % del valor límite (17 µg/m3) |
+
+Umbral inferior de evaluación | 50 % del valor límite (25 µg/m3, que no podrá superarse más de 35 veces por año civil) | 50 % del valor límite (20 µg/m3) | 50 % del valor límite (12 µg/m3) |
+
+4. Plomo
+
+| Media anual |
+
+Umbral superior de evaluación | 70 % del valor límite (0,35 µg/m3) |
+
+Umbral inferior de evaluación | 50 % del valor límite (0,25 µg/m3) |
+
+5. Benceno
+
+| Media anual |
+
+Umbral superior de evaluación | 70 % del valor límite (3,5 µg/m3) |
+
+Umbral inferior de evaluación | 40 % del valor límite (2 µg/m3) |
+
+6. Monóxido de carbono
+
+| Media octohoraria |
+
+Umbral superior de evaluación | 70 % del valor límite (7 mg/m3) |
+
+Umbral inferior de evaluación | 50 % del valor límite (5 mg/m3) |
+
+
+
+
+
+
+
+
+
+ANEXO XI
+
+VALORES LÍMITE PARA LA PROTECCIÓN DE LA SALUD HUMANA
+
+A. Criterios
+
+Sin perjuicio de lo dispuesto en el anexo I, para asegurar su validez, al agregar los datos y calcular los parámetros estadísticos se aplicarán los criterios siguientes:
+
+Parámetro | Porcentaje requerido de datos válidos |
+
+Valores horarios | 75 % (es decir 45 minutos) |
+
+Valores octohorarios | 75 % de los valores (es decir, 6 horas) |
+
+Máxima diaria de las medias móviles octohorarias | 75 % de las medias octohorarias móviles calculadas a partir de datos horarios (es decir, 18 medias octohorarias móviles calculadas a partir de datos actualizados cada hora) |
+
+Valores correspondientes a 24 horas | 75 % de las medias horarias (es decir, valores correspondientes a 18 horas como mínimo) |
+
+Media anual | 90 % [1] de los valores horarios o (si no están disponibles) de los valores correspondientes a 24 horas a lo largo del año |
+
+B. Valores límite
+
+Período medio | Valor límite | Margen de tolerancia | Fecha en la que debe alcanzarse |
+
+Dióxido de azufre
+
+1 hora | 350 µg/m3, que no podrá superarse más de 24 veces por año civil | 150 µg/m3 (43 %) | [2] |
+
+1 día | 125 µg/m3, que no podrá superarse más de 3 veces por año civil | Ninguno | [2] |
+
+Dióxido de nitrógeno
+
+1 hora | 200 µg/m3, que no podrá superarse más de 18 veces por año civil | 50 % a 19 de julio de 1999, valor que se reducirá el 1 de enero de 2001 y, en lo sucesivo, cada 12 meses, en porcentajes anuales idénticos, hasta alcanzar un 0 % el 1 de enero de 2010 | 1 de enero de 2010 |
+
+Año civil | 40 µg/m3 | 50 % a 19 de julio de 1999, valor que se reducirá el 1 de enero de 2001 y, en lo sucesivo, cada 12 meses, en porcentajes anuales idénticos, hasta alcanzar un 0 % el 1 de enero de 2010 | 1 de enero de 2010 |
+
+Benceno
+
+Año civil | 5 µg/m3 | 5 µg/m3 (100 %) a 13 de diciembre de 2000, porcentaje que se reducirá el 1 de enero de 2006 y, en lo sucesivo, cada 12 meses, en 1 µg/m3 hasta alcanzar un 0 % el 1 de enero de 2010 | 1 de enero de 2010 |
+
+Monóxido de carbono
+
+Máxima diaria de las medias móviles octohorarias [3] | 10 mg/m3 | 60 % | [2] |
+
+Plomo
+
+Año civil | 0,5 µg/m3 [4] | 100 % | [4] |
+
+PM10
+
+1 día | 50 µg/m3, que no podrá superarse más de 35 veces por año civil | 50 % | [2] |
+
+Año civil | 40 µg/m3 | 20 % | [2] |
+
+[1] Los requisitos para el cálculo de la media anual no incluyen las pérdidas de datos debidas a la calibración periódica o el mantenimiento normal de la instrumentación.
+
+[2] Ya en vigor desde el 1 de enero de 2005.
+
+[3] La concentración máxima diaria de las medias móviles octohorarias se determinará examinando las medias octohorarias móviles, calculadas a partir de los datos horarios y actualizadas cada hora. Cada media octohoraria calculada de ese modo se asignará al día en que concluya; dicho de otro modo, el primer período utilizado para el cálculo en cualquier día será el comprendido entre las 17.00 horas de la víspera y la 1.00 hora de ese día, y el último período utilizado para cualquier día será el comprendido entre las 16.00 y las 24.00 horas de ese día.
+
+[4] Ya en vigor desde el 1 de enero de 2005. Valor límite que ha de cumplirse a más tardar el 1 de enero de 2010 en las inmediaciones de fuentes industriales específicas situadas en lugares contaminados a lo largo de decenios de actividad industrial. En tales casos, el valor límite hasta el 1 de enero de 2010 será de 1,0 μg/m3. La zona en que sean aplicables valores límite superiores no sobrepasará un radio de 1000 metros a contar de dichas fuentes específicas.

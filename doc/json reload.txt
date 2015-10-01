@@ -1,0 +1,4 @@
+refreshn the geojson layer!!
+
+http://stackoverflow.com/questions/3804097/how-to-reload-json-with-ajax-every-10-seconds
+https://groups.google.com/forum/?fromgroups=#!topic/leaflet-vector-layers/50Lv9ss2Vq8

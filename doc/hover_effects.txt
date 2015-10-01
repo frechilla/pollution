@@ -1,0 +1,4 @@
+1) http://palewi.re/posts/2012/03/26/leaflet-recipe-hover-events-features-and-polygons/
+    Impressive!!
+
+2) http://gis.stackexchange.com/questions/31951/how-to-show-a-popup-on-mouse-over-not-on-click
